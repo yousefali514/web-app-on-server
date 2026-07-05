@@ -1,0 +1,49 @@
+Docker Commands Used
+
+Build images
+
+docker build -t frontend . docker build -t backend .
+
+List images
+
+docker images
+
+Run containers
+
+docker run -d -p 3000:3000 frontend docker run -d -p 8080:8080 backend
+
+List containers
+
+docker ps
+
+View logs
+
+docker logs
+
+Stop container
+
+docker stop
+
+Remove container
+
+docker rm
+
+Tag image
+
+docker tag frontend /frontend:latest
+
+Login
+
+docker login
+
+Push image
+
+docker push /frontend:latest
+
+Pull image
+
+docker pull /frontend:latest
+
+Docker Compose
+
+docker compose up -d docker compose down

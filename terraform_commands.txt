@@ -1,0 +1,93 @@
+Terraform Commands Used
+
+Check Terraform version
+
+terraform version
+
+Initialize Terraform project
+
+terraform init
+
+Format configuration files
+
+terraform fmt
+
+Validate configuration
+
+terraform validate
+
+Preview infrastructure changes
+
+terraform plan
+
+Apply infrastructure changes
+
+terraform apply
+
+Apply without confirmation
+
+terraform apply -auto-approve
+
+Show current state
+
+terraform show
+
+List managed resources
+
+terraform state list
+
+View specific resource
+
+terraform state show
+
+Refresh state
+
+terraform refresh
+
+Destroy infrastructure
+
+terraform destroy
+
+Destroy without confirmation
+
+terraform destroy -auto-approve
+
+Output values
+
+terraform output
+
+Reinitialize providers/modules
+
+terraform init -upgrade
+
+Download providers
+
+terraform providers
+
+Lock providers
+
+terraform providers lock
+
+Generate execution plan to file
+
+terraform plan -out=tfplan
+
+Apply saved execution plan
+
+terraform apply tfplan
+
+Common Backend Configuration (S3)
+
+terraform { backend “s3” { bucket = “your-terraform-state-bucket” key =
+“terraform.tfstate” region = “us-east-1” dynamodb_table =
+“terraform-locks” encrypt = true } }
+
+Typical Workflow
+
+1.  terraform init
+2.  terraform fmt
+3.  terraform validate
+4.  terraform plan
+5.  terraform apply
+6.  terraform output
+7.  terraform destroy (when finished)

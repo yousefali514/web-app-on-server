@@ -1,0 +1,18 @@
+GitHub Actions Workflow
+
+Typical CI/CD Steps
+
+1.  Checkout Repository uses: actions/checkout@v4
+
+2.  Set up Docker Buildx uses: docker/setup-buildx-action@v3
+
+3.  Login to Docker Hub uses: docker/login-action@v3
+
+4.  Build Docker Images docker build -t /frontend:latest ./frontend
+    docker build -t /backend:latest ./backend
+
+5.  Push Images docker push /frontend:latest docker push /backend:latest
+
+6.  Deploy to Kubernetes kubectl apply -f kubernetes/
+
+7.  Verify Deployment kubectl get pods kubectl get services

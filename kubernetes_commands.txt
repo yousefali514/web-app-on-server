@@ -1,0 +1,61 @@
+Kubernetes Commands Used
+
+Start Minikube
+
+minikube start
+
+Check cluster status
+
+kubectl cluster-info
+
+List nodes
+
+kubectl get nodes
+
+Create namespace
+
+kubectl create namespace microservices
+
+Apply all manifests
+
+kubectl apply -f kubernetes/
+
+Check resources
+
+kubectl get all -n microservices
+
+List pods
+
+kubectl get pods -n microservices
+
+List services
+
+kubectl get svc -n microservices
+
+Describe pod
+
+kubectl describe pod -n microservices
+
+View logs
+
+kubectl logs -n microservices
+
+Execute into pod
+
+kubectl exec -it – /bin/sh
+
+Restart deployment
+
+kubectl rollout restart deployment -n microservices
+
+Check rollout status
+
+kubectl rollout status deployment -n microservices
+
+Scale deployment
+
+kubectl scale deployment –replicas=3 -n microservices
+
+Delete resources
+
+kubectl delete -f kubernetes/

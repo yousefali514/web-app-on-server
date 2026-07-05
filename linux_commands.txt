@@ -1,0 +1,70 @@
+Linux Commands Used
+
+System Information
+
+uname -a hostname whoami pwd ls ls -la
+
+Navigation
+
+cd /path/to/directory mkdir project rmdir empty_directory rm -rf
+directory
+
+File Operations
+
+touch file.txt cp source destination mv old_name new_name cat file.txt
+nano file.txt vim file.txt
+
+Search
+
+find . -name “*.yaml” grep -r “image” .
+
+Permissions
+
+chmod +x script.sh chmod 644 file.txt chown user:user file.txt
+
+Processes
+
+ps -ef top htop kill
+
+Disk Usage
+
+df -h du -sh *
+
+Networking
+
+ip addr ping google.com curl http://localhost wget https://example.com
+
+Services
+
+systemctl status docker systemctl start docker systemctl stop docker
+systemctl restart docker systemctl enable docker
+
+Logs
+
+journalctl -u docker tail -f /var/log/syslog
+
+SSH
+
+ssh user@server-ip scp file.txt user@server-ip:/home/user/
+
+Git
+
+git clone git status git add . git commit -m “Initial commit” git push
+origin main
+
+Docker
+
+docker ps docker images
+
+Kubernetes
+
+kubectl get pods kubectl get nodes
+
+Typical Workflow
+
+1.  Connect to the server via SSH.
+2.  Navigate to the project directory.
+3.  Pull the latest code from Git.
+4.  Verify Docker is running.
+5.  Deploy the application using Kubernetes.
+6.  Check pods, services, and logs.

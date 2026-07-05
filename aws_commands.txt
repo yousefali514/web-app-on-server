@@ -1,0 +1,117 @@
+AWS Commands Used
+
+Configure AWS CLI
+
+aws configure
+
+Verify Identity
+
+aws sts get-caller-identity
+
+List AWS Regions
+
+aws ec2 describe-regions
+
+EC2
+
+List EC2 instances
+
+aws ec2 describe-instances
+
+Start an instance
+
+aws ec2 start-instances –instance-ids
+
+Stop an instance
+
+aws ec2 stop-instances –instance-ids
+
+Reboot an instance
+
+aws ec2 reboot-instances –instance-ids
+
+ECR
+
+Login to Amazon ECR
+
+aws ecr get-login-password –region | docker login –username AWS
+–password-stdin .dkr.ecr..amazonaws.com
+
+EKS
+
+List clusters
+
+aws eks list-clusters
+
+Update kubeconfig
+
+aws eks update-kubeconfig –region –name
+
+Describe cluster
+
+aws eks describe-cluster –name
+
+IAM
+
+List roles
+
+aws iam list-roles
+
+S3
+
+List buckets
+
+aws s3 ls
+
+Copy file to S3
+
+aws s3 cp terraform.tfstate s3:///
+
+Sync directory
+
+aws s3 sync ./build s3://
+
+DynamoDB
+
+List tables
+
+aws dynamodb list-tables
+
+CloudWatch
+
+List log groups
+
+aws logs describe-log-groups
+
+View log events
+
+aws logs tail –follow
+
+VPC
+
+List VPCs
+
+aws ec2 describe-vpcs
+
+List Subnets
+
+aws ec2 describe-subnets
+
+List Security Groups
+
+aws ec2 describe-security-groups
+
+Load Balancers
+
+aws elbv2 describe-load-balancers
+
+Typical AWS Workflow
+
+1.  aws configure
+2.  aws sts get-caller-identity
+3.  Provision infrastructure with Terraform
+4.  Update kubeconfig for EKS
+5.  Verify cluster connectivity
+6.  Deploy application using kubectl
+7.  Monitor resources using CloudWatch
+8.  Store Terraform state in S3 with DynamoDB locking

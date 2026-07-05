@@ -1,0 +1,105 @@
+Git Commands Used
+
+Configure Git
+
+git config –global user.name “Your Name” git config –global user.email
+“your.email@example.com”
+
+Check Configuration
+
+git config –list
+
+Initialize Repository
+
+git init
+
+Clone Repository
+
+git clone
+https://github.com/yourusername/scalable-microservices-devops.git
+
+Check Repository Status
+
+git status
+
+View Commit History
+
+git log git log –oneline –graph –all
+
+Create and Switch Branches
+
+git branch git branch feature/new-feature git checkout
+feature/new-feature git switch main
+
+Stage Changes
+
+git add . git add README.md
+
+Commit Changes
+
+git commit -m “Initial project setup” git commit -m “Add Kubernetes
+manifests” git commit -m “Configure GitHub Actions CI/CD”
+
+Connect Remote Repository
+
+git remote add origin
+https://github.com/yourusername/scalable-microservices-devops.git git
+remote -v
+
+Push Changes
+
+git push -u origin main git push origin feature/new-feature
+
+Pull Latest Changes
+
+git pull origin main
+
+Fetch Updates
+
+git fetch –all
+
+Merge Branches
+
+git checkout main git merge feature/new-feature
+
+Delete Branch
+
+git branch -d feature/new-feature
+
+View Differences
+
+git diff git diff –staged
+
+Undo Staged Changes
+
+git restore –staged .
+
+Restore File
+
+git restore README.md
+
+Remove File from Git
+
+git rm filename
+
+Ignore Files
+
+Add entries to .gitignore such as:
+
+.git/ .env *.log terraform.tfstate terraform.tfstate.backup
+
+Create Tag
+
+git tag v1.0.0 git push origin v1.0.0
+
+Typical Git Workflow
+
+1.  git pull origin main
+2.  git checkout -b feature/new-feature
+3.  Make changes
+4.  git add .
+5.  git commit -m “Describe changes”
+6.  git push origin feature/new-feature
+7.  Open a Pull Request
+8.  Merge into main
+9.  git pull origin main
